@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% block title %} 사용 후기 {% endblock %}
+
+{% block content %}
+
+<div class="con">
+    <div style="marginTop:20px;">
+    <h3 class="signup post1">&nbsp; 사용 후기</h3>
+    {% if user.is_authenticated %}
+    <a href="{% url 'home:review_upload' %}">
+        <button type="button" class="btn btn-xs btn-info btn-sm write button_p" style="float:right;">글쓰기</button>
+    </a>
+    {% endif %}
+
+    <hr class="post2" align="left"/>
+
+    {% for post in object_list %}
+        <div class="r_box">
+            <div class="post">
+                <p class="p_title" style="float:left;">{{post.title}}</p> <p style="float:right;">{{post.author.username}}</p>
+                <p class="text-center"><img src="{{post.image.url}}" style="width:100%; height:210px;"></p>
+                <hr>
+                <a href="{% url 'home:review_detail' pk=post.pk %}"><button type="button" class="btn btn-xs btn-info btn-sm d_btn" style="float:right;">상세보기</button></a>
+                <p>{{post.published_date}}</p>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+
+    <div class="page page2">
+        {% block pagination %}
+            {% if is_paginated %}
+            <ul class="pagination">
+
+            {% if page_obj.has_previous %}
+                <li class="page-item page_list">
+                    <a class="page-link" href="{% url 'home:review_list' %}"?page="{{page_obj.previous_page_number }}" tabindex="-1"> < </a>
+                </li>
+            {% endif %}
+
+            {% for object in page_obj.paginator.page_range %}
+                <li class="page_list page-item {% if page_obj.number == forloop.counter %} disabled{% endif %}">
+                    <a class="page-link" href="{{ request.path }}?page={{ forloop.counter }}">{{ forloop.counter }}</a>
+                </li>
+            {% endfor %}
+
+            {% if page_obj.has_next %}
+                <li class="page_list page-item">
+                    <a class="page-link" href="{% url 'home:review_list' %}?page={{ page_obj.next_page_number }}"> > </a>
+                </li>
+            {% else %}
+
+            {% endif %}
+            </ul>
+            {% endif %}
+        {% endblock %}
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block title %} 고객 문의 {% endblock %}
+
+{% block content %}
+<div class="con">
+    <h3 class="signup">&nbsp; 고객 문의</h3>
+    <hr align="left" style="width:82%;"/>
+
+    <div class="r_detail">
+        <p class="p_title">{{object.title}}</p>
+        <strong><p>작성자: {{object.author.username}} | 작성일자: {{object.published_date}}</p></strong>
+        <hr align="left" style="width:80%;"/>
+
+        {% for img in image %}
+            <img src="{{img.path.url}}" style="width:310px; height:250px;">
+        {% endfor %}
+
+        <p>
+            {{object.text|linebreaks}}
+        </p>
+    </div>
+
+<!--    <hr align="left" style="width:82%;"/>-->
+    <div class="r_btn_g">
+        <a href="{% url 'home:post_list' %}">
+            <button type="button" class="btn btn-xs btn-info btn-sm" style="float:right;">목록으로</button>
+        </a>
+
+        <a href="{% url 'home:comment_new2' pk=object.pk %}">
+            <button type="button" class="btn btn-xs btn-info btn-sm" style="float:right;">댓글달기</button>
+        </a>
+
+        {% if request.user == object.author %}
+            <a href="{% url 'home:post_delete' pk=object.pk %}">
+                <button type="button" class="btn btn-xs btn-info btn-sm" style="float:right;">삭제하기</button>
+            </a>
+            <a href="{% url 'home:post_edit' pk=object.pk %}">
+                <button type="button" class="btn btn-xs btn-info btn-sm" style="float:right;">수정하기</button>
+            </a>
+        {% endif %}
+
+        <div>
+            <br/><br/>
+        </div>
+    </div>
+
+    <div class="comment">
+        {% if comments %}
+            <table border="0">
+                {% for comment in comments %}
+                <tr>
+                    <td width="90px">{{comment.author.username}}</td>
+                    <td>{{comment}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        {% else %}
+            <p align="center">현재 등록된 댓글이 없습니다.</p>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}

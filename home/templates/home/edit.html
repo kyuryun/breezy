@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %} 게시글 수정 {% endblock %}
+
+{% block content %}
+<div class="con">
+    <h3 class="signup">&nbsp; 게시글 수정하기</h3>
+    <hr align="left" style="width:70%;"/>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% for field in form %}
+                <div class="form-group">
+                    <table>
+                        <tr height="30">
+                            <td width="130" align="right">{{ field.label }} &nbsp;</td>
+                            <td width="100">{{ field }}</td>
+                        </tr>
+                    </table>
+
+                {% endfor %}
+                <hr align="left" style="width:70%;"/>
+                {{ image_formset.as_p }}
+                </div>
+            <input type="submit" class="signBtn" value="수정하기">
+        </form>
+</div>
+{% endblock %}

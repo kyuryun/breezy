@@ -1,0 +1,774 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@900&display=swap');
+
+html, body {
+    background-color: #daecf7;
+    padding: 20px;
+    height: 100%;
+}
+
+.form-control2 {
+    margin: 3px;
+    padding: 0.5rem 1rem;
+    font-family: "Noto Sans KR", sans-serif;
+    text-decoration: none;
+
+    border: none;
+    border-radius: 4px;
+
+    align: center;
+}
+
+input.form-control {
+    margin: 3px;
+    padding: 0.5rem 1rem;
+    font-family: "Noto Sans KR", sans-serif;
+    text-decoration: none;
+
+    border: none;
+    border-radius: 4px;
+
+    align: center;
+}
+
+button, input.signBtn, input.signBtn2 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+  padding: 0.5rem 1rem;
+
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+
+  display: inline-block;
+  width: auto;
+
+  border: none;
+  border-radius: 4px;
+
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+  cursor: pointer;
+}
+
+input.signBtn2 {
+    background: #dc3545;
+    color: black;
+}
+
+.footer {
+    font-size: 12px;
+    text-align: center;
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:35px;
+    width:100%;
+    background-color: #daecf7;
+}
+
+.logo {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 40px;
+    color: #000;
+    margin-left: 10px;
+}
+
+.loginDiv {
+    font-family: 'Noto Sans KR', sans-serif;
+    float: right;
+    position: relative;
+    bottom: 60px;
+    margin-right: 10px;
+    color: #000;
+}
+
+.loginDiv > a {
+    color: #000;
+    transition: color .3s;
+}
+
+.loginDiv > a:hover {
+    color: #6799FF;
+}
+
+.hr1 {
+    display: none;
+}
+
+.menu {
+    margin-top: 150px;
+    width: 12%;
+    height: 40%;
+    float: left;
+    border-left: 2px solid #5E5E5E;
+}
+
+ul.menuUl li:last-child {
+    margin-bottom: 0px;
+}
+
+.menuUl {
+    list-style: None;
+}
+
+ul > li {
+    margin-bottom: 50px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 25px;
+    color: #000;
+}
+
+ul.menuUl > li > a {
+    color: #000;
+    transition: color 0.3s;
+}
+
+ul.menuUl > li > a:hover {
+    color: #6799FF;
+}
+
+a {
+    text-decoration: None;
+}
+
+.content {
+    margin-top: 50px;
+}
+
+.home {
+    margin-left: 120px;
+    width: 700px;
+    height: 400px;
+}
+
+.main {
+    float: right;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 48px;
+    position: relative;
+    top: 55px;
+    right: 290px;
+}
+
+.mainImg {
+    position: relative;
+    left: 180px;
+    top: 10px;
+    width: 900px;
+    height: 500px;
+    transition: all 0.3s;
+}
+
+.mainImg:hover {
+    width: 910px;
+    height: 510px;
+}
+
+h3.signup {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.signBtn {
+    margin-top: 10px;
+    width: 80px;
+    height: 40px;
+    background: rgb(173, 214, 240);
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15px;
+    color: black;
+    border-radius: 5px;
+}
+
+.con {
+    margin-top: 40px;
+    margin-right: -100px;
+    float: right;
+    width: 75%;
+    height: 100%;
+}
+
+.btnG {
+    width: 200px;
+    position: relative;
+    top: 10px;
+    right: -185px;
+}
+
+.loginBtn {
+    float: right;
+    margin-right: 3px;
+    background: rgb(173, 214, 240);
+    color: black;
+    padding: 27px;
+    position: relative;
+    bottom: 79px;
+}
+
+.logout {
+    font-family: 'Noto Sans KR', sans-serif;
+
+}
+
+.ff {
+    font-size: 15px;
+    margin: 15px;
+}
+
+.done {
+    margin-top: 35px;
+}
+
+.loginBox {
+    padding: 20px;
+    padding-left: 30px;
+    padding-right: 5px;
+    width: 430px;
+    height: 120px;
+}
+
+.findID {
+    margin-top: 20px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15px;
+}
+
+.toSignBtn {
+    float:none;
+}
+
+.findBtn {
+    margin-top: 10px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+    padding: 0.5rem 1rem;
+
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+
+    display: inline-block;
+    width: auto;
+
+    border: none;
+    border-radius: 4px;
+
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.findBtn {
+    padding: 29px;
+    position:relative;
+    left: 350px;
+    bottom: 97px;
+}
+
+.error_message {
+    font-family: "Noto Sans KR", sans-serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    color: red;
+}
+
+.r_box {
+    float: left;
+    margin-top: 20px;
+    margin-left: 50px;
+    position: relative;
+    right: 50px;
+    width: 500px;
+    height: 370px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 2px 2px 7px gray;
+}
+
+.post {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: -5px;
+}
+
+.p_title {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 18px;
+    background: #fff;
+}
+
+.r_detail {
+    width: 80.5%;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-top: 5px;
+    background: #fff;
+    border-radius: 15px;
+}
+
+.write {
+    position:relative;
+    bottom: 40px;
+    right: 145px;
+    box-shadow: none;
+    background: rgb(173, 214, 240);
+    color: #000;
+    padding-right: 7px;
+    padding-left: 7px;
+    padding-top: 4px;
+    padding-bottom: 8px;
+}
+
+.r_btn_g {
+    width: 82%;
+    margin-top: 15px;
+}
+
+.d_btn {
+    background: rgb(173, 214, 240);
+    color: black;
+}
+
+.btnloc {
+    padding: 8px;
+    position: relative;
+    left: 410px;
+    bottom:75px;
+}
+
+.homeBtn {
+    position: relative;
+    right: 85px;
+    bottom: 10px;
+}
+
+.btn-info {
+    margin-left: 5px;
+}
+
+.table {
+    width: 88%;
+    background: #fff;
+    border-collapse: collapse;
+}
+
+.table th {
+    color: #000;
+    background: #F6F6F6;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 18px;
+    padding: 10px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.table th:first-child, .table td:first-child {
+    border-left: 0;
+}
+
+.table th:last-child, .table td:last-child {
+    border-right: 0;
+}
+
+.title_a {
+    color: #6799FF;
+}
+
+.title_a:visited {
+    color: #6799FF;
+}
+
+.title_a:hover {
+    text-decoration: underline;
+}
+
+.post2 {
+     width: 88%;
+}
+
+.page {
+    width: 500px;
+    height: 50px;
+    margin-top: 25px;
+    position: relative;
+    left: 410px;
+}
+
+.page-item {
+    font-size: 15px;
+    list-style: none;
+    display: inline;
+    margin-right: 10px;
+}
+
+.page2 {
+    position: relative;
+    top: 35px;
+    left: 430px;
+    clear: both;
+}
+
+.comment {
+    width: 80.5%;
+    clear: both;
+    margin-top: 20px;
+    padding: 10px;
+    background: rgb(173, 214, 240);
+}
+
+.comment td {
+    padding-left: 15px;
+}
+
+.comment td:first-child {
+    padding: 5px;
+    border-bottom: 2px solid #fff;
+    text-align: center;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.page_list {
+    background-color: white;
+    font-size: 13px;
+    padding: 7px;
+    border-radius: 0;
+    text-align: center;
+    border-radius: 5px;
+}
+
+li.page_list > a {
+    color: #000;
+}
+
+.page_list:hover {
+    background-color: rgb(173, 214, 240);
+}
+
+
+
+section.sec {
+    position: relative;
+    width: 500px;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    margin: 20px auto;
+}
+
+input#sel1, input#sel2, input#sel3, input#sel4, input#sel5  {
+    width: 100px;
+    display: none;
+}
+
+label.btn1, label.btn2, label.btn3 ,label.btn4, label.btn5 {
+    position: relative;
+    left: -220px;
+    top: 20px;
+    display: block;
+    width: 110px;
+    height: 0;
+    line-height: 32px;
+    border-right: 40px solid transparent;
+    border-bottom: 40px solid rgb(173, 214, 240);
+    text-align: center;
+    color: #000000;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: rgba(10, 10, 10, 0.5) 0px 0px 1px;
+    border-radius: 5px 0 0 0px;
+    text-decoration: none;
+    padding-left: 5px;
+    font-family: "Noto Sans KR", sans-serif;
+    cursor: pointer;
+    z-index: 2;
+}
+
+ul.lay {
+    position: relative;
+    margin: 30px auto;
+    width: 500px;
+    height: 300px;
+    padding: 30px;
+    -webkit-box-sizing: border-box;
+}
+
+p .title1 {
+    position: relative;
+    display: block;
+    font-size: 20px;
+    height: 30px;
+    font-weight: bold;
+    color: #6799FF;
+    font-family: "Noto Sans KR", sans-serif;
+    margin-bottom: 20px;
+    text-shadow: rgba(255, 255, 255, 0.9) 1px 1px 1px;
+    border-bottom: 1px dashed #6799FF;
+}
+
+p.title1 {
+    font-size: 15px;
+    line-height: 30px;
+    color: #000000;
+    font-weight: lighter;
+}
+
+input.content1:checked ~ label.btn1,
+input.content2:checked ~ label.btn2,
+input.content3:checked ~ label.btn3,
+input.content4:checked ~ label.btn4,
+input.content5:checked ~ label.btn5{
+    width: 110px;
+    height: 0;
+    line-height: 32px;
+    border-right: 40px solid transparent;
+    border-bottom: 40px solid #fff;
+    text-align: center;
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px 0 0 0px;
+
+    text-shadow: rgba(255, 255, 255, 0.8) 0px 1px 1px;
+    padding-left: 5px;
+}
+
+ul.lay {
+    position: absolute;
+    width: 600px;
+    left: -185px;
+    top: -75px;
+    height: 700px;
+    overflow: hidden;
+}
+
+ul.lay > li {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    list-style: none;
+}
+
+input.content1:checked ~ .lay li:nth-child(1),
+input.content2:checked ~ .lay li:nth-child(2),
+input.content3:checked ~ .lay li:nth-child(3),
+input.content4:checked ~ .lay li:nth-child(4),
+input.content5:checked ~ .lay li:nth-child(5) {
+    -webkit-animation: none;
+    -webkit-transition: left 0.5s ease-in-out;
+    left: 0px;
+    z-index: 10;
+}
+
+input:checked ~ .lay li {
+    -webkit-animation: ex1 0.5s ease-in-out none;
+}
+
+@-webkit-keyframes ex1 {
+    0%{left: 0px;}
+    100%{left: -600px;}
+}
+
+.effect {
+    position: relative;
+    width: 780px;
+    height: 600px;
+    margin: -20px auto;
+    -webkit-box-sizing: border-box;
+    background: #fff;
+    border-radius: 0 10px 10px 10px;
+    top: 20px;
+    left: -134px;
+}
+
+.effect:before, .effect:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    top: 70%;
+    bottom: 0;
+    left: 15px;
+    right: 15px;
+    border-radius: 100px/10px;
+}
+
+details {
+    margin:5px 0 10px;
+}
+
+
+details > summary {
+    background: #fffdfd;
+    color: #000000;
+    padding:10px;
+    outline:0;
+    border-radius:5px;
+    cursor:pointer;
+    transition:background 0.5s;
+    text-align:left;
+    box-shadow: 1px 1px 2px #5e5e5e;
+    font-size: 18px;
+}
+
+details > summary::-webkit-details-marker { background:#444; color:#fff; background-size:contain; transform:rotate3d(0, 0, 1, 90deg); transition:transform 0.25s;}
+
+details[open] > summary::-webkit-details-marker {
+    transform:rotate3d(0, 0, 1, 180deg);
+}
+
+details[open] > summary {
+    background: rgb(173, 214, 240);
+    font-size: 18px;
+}
+
+details[open] > summary ~ * {
+    animation:reveal 0.5s;
+}
+
+.tpt { background: #ffffff; color: #000000; margin:5px 0 10px; padding:5px 10px; line-height:25px; border-radius:5px; box-shadow: 1px 1px 2px gray; }
+
+@keyframes reveal {
+    from { opacity:0; transform:translate3d(0, -30px, 0); }
+    to { opacity:1; transform:translate3d(0, 0, 0); }
+}
+
+.tpt {
+    background: #ffffff;
+    color: #000000;
+    margin:5px 0 10px;
+    padding:5px 10px;
+    line-height:30px;
+    border-radius:5px;
+    box-shadow: 1px 1px 2px gray;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 18px;
+}
+
+
+
+@media screen and (max-width : 760px) {
+    .loginDiv {
+        float: none;
+        position: relative;
+        top: 20px;
+        left: 205px;
+    }
+
+    .loginDiv {
+        position: absolute;
+        top: 120px;
+        left: 60px;
+    }
+
+    .menu {
+        margin-top: 50px;
+        float: none;
+        position: absolute;
+        left: 20px;
+        width: 100%;
+        height: 30%;
+        border: none;
+    }
+
+    li {
+        font-size: 20px;
+        margin-right: 20px;
+        float: left;
+    }
+
+    .hr1 {
+        display: block;
+        position: relative;
+        top: 55px;
+    }
+
+    .mainImg {
+        width: 700px;
+        height: 350px;
+        margin-top: 110px;
+        margin-left: -240px;
+        position: relative;
+        right: 150px;
+    }
+
+    .mainImg:hover {
+        width: 710px;
+        height: 360px;
+    }
+
+    .con {
+        position: relative;
+        top: 80px;
+        right: 190px;
+    }
+
+    .btnG {
+        left: 299px;
+    }
+
+    .footer {display: none;}
+
+    .btnG {
+        float: right;
+        margin-top: 5px;
+        margin-right: 70%;
+    }
+
+    .hide_td {
+        display: none;
+    }
+
+    .post1 {
+        position: relative;
+        top: 35px;
+        right: 10px;
+    }
+
+    .post2 {
+        width: 108%;
+    }
+
+    .button_p {
+        position: relative;
+        bottom: 5px;
+        left: 35px;
+    }
+
+    .button_p2 {
+        position: relative;
+        bottom: 5px;
+        right: 58px;
+    }
+
+    .page {
+        position: relative;
+        left: 110px;
+    }
+
+    .page2 {
+        position: relative;
+        left: 150px;
+    }
+
+    .table th {
+        font-size: 15px;
+        height: 30px;
+    }
+}

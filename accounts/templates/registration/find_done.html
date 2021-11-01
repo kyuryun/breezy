@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>It's BREEZY!</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+<header>
+    <div class="logoDiv"><a href="/" class="logo">BREEZY</a></div>
+    <div class="loginDiv">
+        <a href="{% url 'login' %}">로그인 </a> /
+        <a href="{% url 'register' %}">회원가입 </a>
+    </div>
+</header>
+
+<div class="con">
+    <h3 class="signup">&nbsp; 아이디 찾기 완료</h3>
+    <hr align="left" style="width:70%;"/>
+    <p class="logout ff">회원님의 아이디는 " {{user}} " 입니다!</p>
+    <hr align="left" style="width:70%;" class="done"/>
+    <a href="/"><button type="button" class="logout">홈으로 돌아가기</button></a>
+    <a href="{% url 'login' %}"><button type="button" class="logout">로그인하기</button></a>
+</div>
+
+</body>
+</html>

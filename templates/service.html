@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>It's BREEZY! - {% block title %}{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'service.css' %}">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+<header>
+
+    <div class="logoDiv"><a href="/" class="logo">BREEZY</a></div>
+    <div class="loginDiv">
+        {% if user.is_authenticated %}
+        <a href="{% url 'logout' %}">[{{user.get_username}} 님] 로그아웃 </a> /
+        {% else %}
+        <a href="{% url 'login' %}">로그인 </a> /
+        {% endif %}
+
+        {% if user.is_authenticated %}
+        <a href="{% url 'mypage' %}">마이페이지 </a>
+        {% else %}
+        <a href="{% url 'register' %}">회원가입 </a>
+        {% endif %}
+    </div>
+</header>
+
+<hr class="hr1"/>
+
+<div class="menu">
+    <ul class="menuUl">
+        <li><a href="{% url 'home:home_about' %}">기업 소개</a></li>
+        <li><a href="{% url 'home:home_service' %}">서비스 안내</a></li>
+        <li><a href="{% url 'home:review_list' %}">사용 후기</a></li>
+        <li><a href="{% url 'home:post_list' %}">고객 문의</a></li>
+    </ul>
+</div>
+
+{% block content %}
+
+
+{% endblock %}
+
+<footer class="footer">
+    <p>Copyright © BREEZY Corp. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

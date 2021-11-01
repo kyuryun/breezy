@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>It's BREEZY!</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+<header>
+    <div class="logoDiv"><a href="/" class="logo">BREEZY</a></div>
+    <div class="loginDiv">
+        {% if user.is_authenticated %}
+        <a href="{% url 'logout' %}">[{{user.get_username}} 님] 로그아웃 </a> /
+        {% else %}
+        <a href="{% url 'login' %}">로그인 </a> /
+        {% endif %}
+
+        {% if user.is_authenticated %}
+        <a href="{% url 'mypage' %}">마이페이지 </a>
+        {% else %}
+        <a href="{% url 'register' %}">회원가입 </a>
+        {% endif %}
+    </div>
+</header>
+
+<div class="con">
+    <form method="post" class="post-form">
+        {% csrf_token %}
+        <h3 class="signup">&nbsp; 아이디 찾기</h3>
+        <hr align="left" style="width:70%;"/>
+
+<!--        <div class="loginBox">-->
+<!--            {{ form.as_p }}-->
+<!--        </div>-->
+        {% for field in form %}
+            <div class="form-control">
+                <table>
+                    <tr>
+                        <td width="100" align="right">{{ field.label }} </td>
+                        <td width="100">{{ field }} </td>
+                    </tr>
+                </table>
+            </div>
+        {% endfor %}
+        <a><input class="findBtn" type="submit" value="아이디 찾기"></a>
+    </form>
+</div>
+
+</body>
+</html>

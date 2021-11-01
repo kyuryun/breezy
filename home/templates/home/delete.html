@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %} 게시글 삭제 {% endblock %}
+
+{% block content %}
+<div class="con">
+    <h3 class="signup">&nbsp; 게시글 삭제</h3>
+    <hr align="left" style="width:70%;"/>
+    <p class="logout ff">[{{Post.title}}] 게시글을 삭제하시겠습니까?</p>
+    <hr align="left" style="width:70%;" class="done"/>
+    <form action="" method="post">
+        {{form.as_p}}
+        {% csrf_token %}
+        <button type="submit" class="btn btn-xs btn-info btn-sm">삭제하기</button>
+
+        <a href="{% url 'home:review_detail' pk=Post.pk %}">
+            <button type="button" class="btn btn-xs btn-info btn-sm">돌아가기</button>
+        </a>
+    </form>
+</div>
+{% endblock %}

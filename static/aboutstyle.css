@@ -1,0 +1,68 @@
+.aboutImg {
+    float:left;
+    width: 600px;
+    height: 450px;
+    margin-left: 165px;
+    margin-top: 40px;
+}
+
+.maintext{
+    float: right;
+    margin-top: 55px;
+    margin-right: 130px;
+    width: 500px;
+    height: 500px;
+}
+
+.textone{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 45px;
+    margin-top: 45px;
+    margin-right: 20px;
+}
+
+.texttwo{
+    margin-top: 15px;
+    font-family: 'Arial Black', sans-serif;
+    font-size: 35px;
+}
+
+.textthree{
+    margin-top:50px;
+    font-family: 'Noto Sans KR';
+    font-size: 15px;
+}
+
+.textfour{
+    margin-top: 20px;
+    font-family: 'Noto Sans KR';
+    font-size: 15px;
+}
+
+.hr1 {
+    display: none;
+}
+
+
+@media screen and (max-width : 760px) {
+     .aboutImg {
+         flex-direction: column;
+         align-items: center;
+         margin-top: 130px;
+         margin-left: 70px;
+     }
+
+    .maintext{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 80px;
+        margin-right: 65px;
+        text-align: center;
+    }
+
+    .hr1 {
+        display: block;
+        position: relative;
+        top: 55px;
+    }
+ }
